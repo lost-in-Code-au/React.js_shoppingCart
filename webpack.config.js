@@ -1,13 +1,14 @@
 const path = require('path')
+const htmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: "./src/Index.js",
     output: {
         filename: "bundle.js",
         path: path.join(__dirname, "public")
     },
     devServer: {
-        contentBase: path.join(__dirname, "js"),
+        contentBase: path.join(__dirname, "public"),
         port: 8080
     },
     module: {
@@ -43,5 +44,8 @@ module.exports = {
                 ]
             }
         ]
-    }
+    },
+    plugins: [
+        new htmlWebpackPlugin()
+    ]
 }
