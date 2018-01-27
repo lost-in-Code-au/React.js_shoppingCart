@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom'
 
 // TODO: implament all hashed out code
 import BeerData from './data/BeerData'
-// import CartAPI from './utils/CartAPI'
+import CartAPI from './data/CartAPI'
 // import FluxCartApp from './components/FluxCartApp.react.js'
 
 // Load Mock Data into localStorage
 BeerData.init()
 
 // Load Mock API Call
-// CartAPI.getProductData()
+CartAPI.getProductData()
 
 // Render FluxCartApp Controller View
 ReactDOM.render(
